@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kelvins LearnSphere — affordable educational and inspirational e-books.">
+  <title>Kelvins LearnSphere | Read. Learn. Grow. Achieve.</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Kelvins LearnSphere home">
+      <span class="brand-mark">KL</span>
+      <span><strong>Kelvins LearnSphere</strong><small>Read. Learn. Grow. Achieve.</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#library">Library</a><a href="#categories">Categories</a><a href="#how">How it works</a><a href="#support">Support</a>
+    </nav>
+    <div class="header-actions">
+      <button class="button button-outline" id="login-open">Sign in</button>
+      <button class="button button-gold" id="register-open">Join free</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR KNOWLEDGE. YOUR FUTURE.</p>
+        <h1>Open a book.<br><span>Open possibilities.</span></h1>
+        <p class="hero-description">Affordable learning resources, curriculum support, and inspiring reads for curious minds and ambitious learners.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#library">Explore the library</a><button class="button button-outline" id="hero-join">Create a free account</button></div>
+        <div class="hero-proof"><span>Free registration</span><span>Three welcome books</span><span>Secure checkout design</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="book book-back"></div><div class="book book-mid"></div>
+        <div class="book book-front"><span>LEARN<br>EVERY DAY</span><i>KL</i></div>
+        <div class="gold-disc"></div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Platform features">
+      <div><strong>01</strong><span>Learn at your pace</span></div><div><strong>02</strong><span>Find your subject</span></div><div><strong>03</strong><span>Build your library</span></div><div><strong>04</strong><span>Keep growing</span></div>
+    </section>
+
+    <section class="section" id="library">
+      <div class="section-heading"><div><p class="eyebrow">THE DIGITAL LIBRARY</p><h2>Find your next great read</h2><p>Search by title, subject, category, or learning level.</p></div></div>
+      <div class="search-row"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search books, subjects, levels..." aria-label="Search books"></label><select id="category-filter" aria-label="Filter by category"><option value="">All categories</option></select></div>
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <div id="book-grid" class="book-grid"><p class="muted">Loading library…</p></div>
+    </section>
+
+    <section class="section category-section" id="categories">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE BY INTEREST</p><h2>A library for every ambition</h2><p>Browse popular learning areas and discover something new.</p></div></div>
+      <div class="category-grid">
+        <button class="category-card" data-category="Biology"><span class="category-number">01</span><strong>Science &amp; Mathematics</strong><small>Biology, Chemistry, Physics, Mathematics</small></button>
+        <button class="category-card" data-category="Geography"><span class="category-number">02</span><strong>Humanities &amp; Languages</strong><small>Geography, History, English, Kiswahili</small></button>
+        <button class="category-card" data-category="Motivation"><span class="category-number">03</span><strong>Motivation &amp; Growth</strong><small>Habits, leadership, confidence, purpose</small></button>
+        <button class="category-card" data-category="Inspirational"><span class="category-number">04</span><strong>Inspirational Reading</strong><small>Life stories, courage, positive change</small></button>
+        <button class="category-card" data-category="Technology"><span class="category-number">05</span><strong>Technology &amp; Careers</strong><small>Programming, AI, data, cybersecurity</small></button>
+        <button class="category-card" data-category="Agriculture"><span class="category-number">06</span><strong>Agriculture &amp; Environment</strong><small>Practical skills and sustainability</small></button>
+      </div>
+    </section>
+
+    <section class="feature-band" id="how">
+      <div><p class="eyebrow">SIMPLE BY DESIGN</p><h2>Knowledge should be within reach.</h2><p>Create an account for free, explore the library, and purchase authorized digital books. Eligible new members receive three introductory books.</p></div>
+      <div class="steps"><div><span>1</span><p><strong>Create your account</strong><small>Sign up at no cost.</small></p></div><div><span>2</span><p><strong>Choose your book</strong><small>Check the price and details.</small></p></div><div><span>3</span><p><strong>Pay securely</strong><small>M-Pesa STK Push or manual verification.</small></p></div><div><span>4</span><p><strong>Read and grow</strong><small>Verified purchases appear in your library.</small></p></div></div>
+    </section>
+
+    <section class="support-section" id="support">
+      <div><p class="eyebrow">HELP THE LIBRARY GROW</p><h2>Support access to knowledge.</h2><p>Contributions can help improve the platform and expand access to useful learning resources.</p></div>
+      <div class="support-card"><strong>Have a resource to share?</strong><p>Teachers and authors can contribute materials they own or are authorized to distribute. Contact the site administrator to arrange contributor access.</p><a class="text-link" href="mailto:hello@learnsphere.example">Contact the team <span>↗</span></a><small>Donations are not processed by this starter website. Configure a verified payment workflow before accepting contributions.</small></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">KL</span><span><strong>Kelvins LearnSphere</strong><small>Read. Learn. Grow. Achieve.</small></span></a><p>Affordable learning. Lifelong possibilities.</p><small>Only upload and distribute books you own or have permission to share. © <span id="year"></span> Kelvins LearnSphere.</small></footer>
+
+  <dialog id="auth-dialog" class="auth-dialog">
+    <form method="dialog" class="dialog-close-row"><button class="icon-button" aria-label="Close dialog">×</button></form>
+    <div class="dialog-content"><p class="eyebrow" id="auth-eyebrow">WELCOME</p><h2 id="auth-title">Join LearnSphere</h2><p id="auth-description">Create a free account to start building your library.</p>
+      <form id="auth-form" class="auth-form">
+        <label id="name-field">Full name<input name="name" autocomplete="name" minlength="2" maxlength="80" required></label>
+        <label>Email address<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+        <label>Password<input name="password" type="password" autocomplete="new-password" minlength="12" required maxlength="128"><small>Use at least 12 characters.</small></label>
+        <button class="button button-gold button-full" id="auth-submit" type="submit">Create free account</button>
+      </form><p class="form-switch" id="auth-switch">Already registered? <button type="button" id="switch-login">Sign in</button></p><p id="auth-message" class="form-message" role="status"></p>
+    </div>
+  </dialog>
+  <dialog id="purchase-dialog" class="auth-dialog">
+    <form method="dialog" class="dialog-close-row"><button class="icon-button" aria-label="Close dialog">×</button></form>
+    <div class="dialog-content"><p class="eyebrow">BOOK CHECKOUT</p><h2 id="purchase-title">Purchase book</h2><p id="purchase-description"></p>
+      <div class="checkout-options"><label>M-Pesa phone number<input id="mpesa-phone" type="tel" placeholder="0712345678" autocomplete="tel"></label><button class="button button-gold button-full" id="stk-button">Request STK Push</button>
+      <div class="divider-text">OR SUBMIT A MANUAL PAYMENT</div><p class="muted">Send payment using the instructions supplied by the site owner, then enter your transaction reference. Your book stays locked until the payment is verified.</p><label>M-Pesa transaction reference<input id="manual-reference" maxlength="40" placeholder="e.g. QWE123ABC"></label><button class="button button-outline button-full" id="manual-button">Submit for verification</button></div>
+      <p id="purchase-message" class="form-message" role="status"></p>
+    </div>
+  </dialog>
+</body>
+</html>
